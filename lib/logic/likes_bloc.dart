@@ -11,7 +11,7 @@ class LikesBloc extends Bloc<LikesEvents, LikesState> {
   final StorageService storageService;
   LikesBloc()
       : storageService = const StorageService(),
-        super(const LikesInitial()) {
+        super(LikesInitial()) {
     on<AddToLikes>(_mapAddToLikesToState);
     on<RemoveFromLikes>(_mapRemoveFromLikesState);
     on<GetLikes>(_mapGetLikesToState);
