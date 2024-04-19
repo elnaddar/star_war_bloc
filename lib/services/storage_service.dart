@@ -4,6 +4,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:star_war_bloc/models/swapi_object.dart';
 
 class StorageService {
+  const StorageService();
+
   Future<void> save(List<SwapiObject> values) async {
     SharedPreferences prfes = await SharedPreferences.getInstance();
     List<String> objects = values.map((e) => json.encode(e.toJson())).toList();
