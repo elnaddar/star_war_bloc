@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '/models/swapi_object.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:star_war_bloc/logic/likes_bloc.dart';
 import '../../widgets/swapi_object_list_item.dart';
 
 class LikesScreen extends StatelessWidget {
@@ -8,6 +9,7 @@ class LikesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = BlocProvider.of<LikesBloc>(context);
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
@@ -38,15 +40,12 @@ class LikesScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 50.0),
               child: ListView.builder(
-                itemCount: 10,
+                itemCount: bloc.state.likes.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 50.0),
                     child: SwapiObjectListItem(
-                      object: SwapiObject(
-                        name: "Luke Skywalker",
-                        url: "https://swapi.dev/api/people/1/",
-                      ),
+                      object: bloc.state.likes[index],
                     ),
                   );
                 },
