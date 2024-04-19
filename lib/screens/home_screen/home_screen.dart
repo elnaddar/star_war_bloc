@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:star_war_bloc/logic/likes_bloc.dart';
+import 'package:star_war_bloc/logic/likes_event.dart';
 import 'widgets/categories_list.dart';
 import 'widgets/likes_button.dart';
 
@@ -7,6 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    BlocProvider.of<LikesBloc>(context).add(const GetLikes());
     return Scaffold(
       backgroundColor: Colors.black,
       extendBody: true,
