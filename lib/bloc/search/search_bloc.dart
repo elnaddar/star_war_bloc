@@ -14,6 +14,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
 
   Future<FutureOr<void>> _mapSearchToState(
       Search event, Emitter<SearchState> emit) async {
+    emit(SearchLoading());
     try {
       List<SwapiObject> results =
           await SearchService().search(event.category, event.query);

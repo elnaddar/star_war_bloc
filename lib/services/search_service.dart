@@ -5,8 +5,7 @@ import 'dart:convert';
 
 class SearchService {
   Future<List<SwapiObject>> search(Category category, String query) async {
-    String url =
-        "https://swapi.dev/api/${getCategoryName(category)}/?search=$query";
+    String url = "https://swapi.dev/api/${category.name}/?search=$query";
     http.Response response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       Map<String, dynamic> jsonResponse =
