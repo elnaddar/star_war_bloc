@@ -23,7 +23,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
       if (kDebugMode) {
         print(e);
       }
-      SearchError(e.toString());
+      emit(SearchError(e.toString()));
     }
   }
 }
