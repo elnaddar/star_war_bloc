@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:star_war_bloc/utils/categories.dart';
 
 abstract class SearchEvent {
   const SearchEvent();
