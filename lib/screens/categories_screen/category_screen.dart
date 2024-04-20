@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:star_war_bloc/screens/search_screen/search_screen.dart';
 import '../../widgets/swapi_object_list_item.dart';
 import '../../models/swapi_object.dart';
 import '../../services/swapi_service.dart';
@@ -35,6 +36,15 @@ class CategoryScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(getCategoryName(category),
             style: Theme.of(context).textTheme.displayLarge),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search, color: Colors.white),
+            onPressed: () {
+              Navigator.pushNamed(context, SearchScreen.routeName,
+                  arguments: SearchScreenArguments(category));
+            },
+          ),
+        ],
       ),
       body: Container(
         decoration: const BoxDecoration(
