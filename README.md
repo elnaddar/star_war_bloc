@@ -5,7 +5,7 @@ Star War Bloc is a Flutter project utilizing the Business Logic Component (BLoC)
 
 ## Project Structure
 - `lib/`: Source files for the application's logic and UI.
-  - `blocs/`: BLoC components for state management.
+  - `bloc/`: BLoC components for state management.
   - `models/`: Data models.
   - `views/`: UI components.
   - `services/`: Services for API interactions and data handling.
