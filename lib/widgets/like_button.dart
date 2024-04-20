@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:star_war_bloc/logic/likes_bloc.dart';
-import 'package:star_war_bloc/logic/likes_event.dart';
-import 'package:star_war_bloc/logic/likes_state.dart';
+import 'package:star_war_bloc/bloc/likes/likes_bloc.dart';
+import 'package:star_war_bloc/bloc/likes/likes_event.dart';
+import 'package:star_war_bloc/bloc/likes/likes_state.dart';
 import '../models/swapi_object.dart';
 
 class LikeButton extends StatelessWidget {

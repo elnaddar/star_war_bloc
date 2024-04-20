@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:star_war_bloc/logic/likes_bloc.dart';
+import 'package:star_war_bloc/bloc/likes/likes_bloc.dart';
 import 'screens/likes_screen/likes_screen.dart';
 import 'screens/categories_screen/category_screen.dart';
 import 'screens/details_screen/details_screen.dart';

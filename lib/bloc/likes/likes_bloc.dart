@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:star_war_bloc/logic/likes_event.dart';
-import 'package:star_war_bloc/logic/likes_state.dart';
+import 'package:star_war_bloc/bloc/likes/likes_event.dart';
+import 'package:star_war_bloc/bloc/likes/likes_state.dart';
 import 'package:star_war_bloc/models/swapi_object.dart';
 import 'package:star_war_bloc/services/storage_service.dart';
 

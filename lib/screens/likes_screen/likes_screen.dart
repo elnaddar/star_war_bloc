@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:star_war_bloc/logic/likes_bloc.dart';
+import 'package:star_war_bloc/bloc/likes/likes_bloc.dart';
 import '../../widgets/swapi_object_list_item.dart';
 
 class LikesScreen extends StatelessWidget {
