@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:star_war_bloc/bloc/likes/likes_bloc.dart';
+import 'package:star_war_bloc/screens/search_screen/search_screen.dart';
 import 'screens/likes_screen/likes_screen.dart';
 import 'screens/categories_screen/category_screen.dart';
 import 'screens/details_screen/details_screen.dart';
@@ -55,6 +56,15 @@ class App extends StatelessWidget {
               builder: (context) => const LikesScreen(),
             );
           }
+          if (settings.name == SearchScreen.routeName) {
+            final SearchScreenArguments args =
+                settings.arguments as SearchScreenArguments;
+            return MaterialPageRoute(
+              // TODO: Write your code here
+              builder: (context) => SearchScreen(category: args.category),
+            );
+          }
+
           return null;
         }),
       ),
