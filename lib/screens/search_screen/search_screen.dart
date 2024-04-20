@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:star_war_bloc/bloc/search/search_bloc.dart';
+import 'package:star_war_bloc/bloc/search/search_events.dart';
 import '/utils/categories.dart';
 
 import 'widgets/search_results.dart';
@@ -12,7 +15,7 @@ class SearchScreenArguments {
 class SearchScreen extends StatelessWidget {
   final Category category;
   static const String routeName = '/search';
-  const SearchScreen({Key? key, required this.category}) : super(key: key);
+  const SearchScreen({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,9 @@ class SearchScreen extends StatelessWidget {
         centerTitle: true,
         title: TextField(
           onChanged: (value) {
-            // TODO: Write your code here
+            context
+                .read<SearchBloc>()
+                .add(Search(category: category, query: value));
           },
           style: const TextStyle(
             color: Colors.white,
